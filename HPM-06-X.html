@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>HPM-06-X</title>
+    <link rel="stylesheet" href="css/HPM_CSS.css" media="screen" type="text/css" />
+    <script language="javascript" type="text/javascript">
+    var lastid;
+    function show_submenu(obj) {
+        var ele = document.getElementById(obj).style;
+        var elemLastId = document.getElementById(lastid);
+        if (elemLastId != null) {
+            elemLastId.style.display = "none";
+        }
+        lastid = obj;
+        if (ele.display == "none") {
+            ele.display = "block";
+        } else {
+            ele.display = "none";
+        }
+    }
+	
+	function toggle_menu(id){
+		var menu = document.getElementById(id);
+		if(menu.style.display == 'none')
+			menu.style.display = 'block';
+		else
+			menu.style.display = 'none';
+	}
+    </script>
+</head>
+
+<body>
+<div id="task"><span>48%</span>請點擊「國際」類別內「中港澳台」選項</div>
+	<nav>
+        <div id="menu_btn" onClick="toggle_menu('container');"><a>選單</a></div>
+            <div id="container" style="display: none;">
+                    <span class="M1" onclick="show_submenu('S1')"><a href="#">財經</a></span>
+                        <div id="S1" style="display: none;">
+                            <span class="S1-1"><a href="HPM-07-X.html">股市匯市</a></span>
+                            <span class="S1-2"><a href="HPM-07-X.html">產業動態</a></span>
+                            <span class="S1-3"><a href="HPM-07-X.html">經貿財稅</a></span>
+                        </div>
+                    <span class="M2" onclick="show_submenu('S2')"><a href="#">國際</a></span>
+                        <div id="S2" style="display: none;">
+                            <span class="S2-1"><a href="HPM-07-X.html">日韓澳俄</a></span>
+                            <span class="S2-2"><a href="HPM-07.html">中港澳台</a></span>
+                            <span class="S2-3"><a href="HPM-07-X.html">歐美非洲</a></span>
+                        </div>
+                    <span class="M3" onclick="show_submenu('S3')"><a href="#">科技</a></span>
+                        <div id="S3" style="display: none;">
+                            <span class="S3-1"><a href="HPM-07-X.html">資訊電子</a></span>
+                            <span class="S3-2"><a href="HPM-07-X.html">科學發展</a></span>
+                            <span class="S3-3"><a href="HPM-07-X.html">自然環境</a></span>
+                        </div>
+                    <span class="M4" onclick="show_submenu('S4')"><a href="#">地方</a></span>
+                        <div id="S4" style="display: none;">
+                            <span class="S4-1"><a href="HPM-07-X.html">北部地區</a></span>
+                            <span class="S4-2"><a href="HPM-07-X.html">中部離島</a></span>
+                            <span class="S4-3"><a href="HPM-07-X.html">南部東部</a></span>
+                        </div>
+                    <span class="M5" onclick="show_submenu('S5')"><a href="#">影劇</a></span>
+                        <div id="S5" style="display: none;">
+                            <span class="S5-1"><a href="HPM-07-X.html">藝人動態</a></span>
+                            <span class="S5-2"><a href="HPM-07-X.html">電視廣播</a></span>
+                            <span class="S5-3"><a href="HPM-07-X.html">音樂電影</a></span>
+                        </div>
+                    <span class="M6" onclick="show_submenu('S6')"><a href="#">生活</a></span>
+                        <div id="S6" style="display: none;">
+                            <span class="S6-1"><a href="HPM-07-X.html">消費交通</a></span>
+                            <span class="S6-2"><a href="HPM-07-X.html">寵物美食</a></span>
+                            <span class="S6-3"><a href="HPM-07-X.html">氣象預報</a></span>
+                        </div>
+            </div><!--end container-->			
+	</nav>
+</body>
+</html>

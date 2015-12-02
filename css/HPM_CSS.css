@@ -1,0 +1,456 @@
+body {
+  margin:0px;
+}
+#task{
+  padding:5px;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;
+  color:#FFF;
+  background-color:#000;
+  text-align:center;
+}
+#task span{
+  margin:0px 5px;
+  padding:0px 5px;
+  color:#F90;
+  border:#F90 solid 2px;
+}
+nav {
+  position:fixed;
+  right:0px;	
+}
+#menu_btn {
+  position:fixed;
+  top:230px; right:0px;    /*看fu*/
+  width:50px;  height:100px;
+  border-radius: 100px 0px 0px 100px;
+  background-color:#D96704; 
+  z-index:20;
+  cursor: pointer;	  /*手形提示鼠標*/  
+}
+#menu_btn:hover {
+  background-color: #BF4904;  
+}
+#menu_btn a {
+  position:absolute;
+  top:40%; left:10px;    /*看fu*/
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;
+  color:#FFF;
+  text-decoration:none;    /*去除超連結底線*/
+  z-index:15;
+}
+
+
+#container {
+  position: relative;
+  width: 250px; height: 500px;	/*長寬隨意不重要*/
+  z-index:5;
+}
+#container span {	/*第一層選項*/
+  position: absolute;
+  top:100px; right:-30px;	/*因為選項寬度30px*/
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 150px 30px;		/*維持5:1的比例*/
+  box-sizing: border-box;	/*防止排版錯亂*/
+  cursor: pointer;
+  z-index:10;
+}
+#container span a{
+  position: absolute;
+  top:-120px; left:-30px;  /*看fu*/
+  width:64px;    /*因為一個字寬為16px,因此4個字為64px寬*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	  
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  text-decoration: none;
+  z-index:15;
+}
+
+
+.M1 {
+  -webkit-transform: rotate(326.25deg);
+  -moz-transform: rotate(326.25deg);
+  -ms-transform: rotate(326.25deg);
+  -o-transform: rotate(326.25deg);
+  transform: rotate(326.25deg);
+  border-color: #13110e transparent transparent transparent;    /*transparent為透明*/
+}
+.M1:hover {
+  border-color: #400106 transparent transparent transparent;
+}
+.M2 {
+  -webkit-transform: rotate(303.75deg);
+  -moz-transform: rotate(303.75deg);
+  -ms-transform: rotate(303.75deg);
+  -o-transform: rotate(303.75deg);
+  transform: rotate(303.75deg);
+  border-color: #2a251f transparent transparent transparent;
+}
+.M2:hover {
+  border-color: #530108 transparent transparent transparent;
+}
+.M3 {
+  -webkit-transform: rotate(281.25deg);
+  -moz-transform: rotate(281.25deg);
+  -ms-transform: rotate(281.25deg);
+  -o-transform: rotate(281.25deg);
+  transform: rotate(281.25deg);
+  border-color: #403a30 transparent transparent transparent;
+}
+.M3:hover {
+  border-color: #67020a transparent transparent transparent;
+}
+.M4 {
+  -webkit-transform: rotate(258.75deg);
+  -moz-transform: rotate(258.75deg);
+  -ms-transform: rotate(258.75deg);
+  -o-transform: rotate(258.75deg);
+  transform: rotate(258.75deg);
+  border-color: #564e41 transparent transparent transparent;
+}
+.M4:hover {
+  border-color: #7a020b transparent transparent transparent;
+}
+.M5 {
+  -webkit-transform: rotate(236.25deg);
+  -moz-transform: rotate(236.25deg);
+  -ms-transform: rotate(236.25deg);
+  -o-transform: rotate(236.25deg);
+  transform: rotate(236.25deg);
+  border-color: #6d6252 transparent transparent transparent;
+}
+.M5:hover {
+  border-color: #8d020d transparent transparent transparent;
+}
+.M6 {
+  -webkit-transform: rotate(213.75deg);
+  -moz-transform: rotate(213.75deg);
+  -ms-transform: rotate(213.75deg);
+  -o-transform: rotate(213.75deg);
+  transform: rotate(213.75deg);
+  border-color: #837662 transparent transparent transparent;
+}
+.M6:hover {
+  border-color: #a1030f transparent transparent transparent;
+}
+
+
+#S1 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S1 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S1-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #400106 transparent transparent transparent;
+}
+.S1-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S1-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #67020a transparent transparent transparent;
+}
+.S1-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S1-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #8d020d transparent transparent transparent;
+}
+.S1-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+#S2 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S2 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S2-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #530108 transparent transparent transparent;
+}
+.S2-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S2-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #7a020b transparent transparent transparent;
+}
+.S2-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S2-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #a1030f transparent transparent transparent;
+}
+.S2-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+#S3 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S3 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S3-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #400106 transparent transparent transparent;
+}
+.S3-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S3-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #67020a transparent transparent transparent;
+}
+.S3-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S3-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #8d020d transparent transparent transparent;
+}
+.S3-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+#S4 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S4 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S4-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #530108 transparent transparent transparent;
+}
+.S4-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S4-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #7a020b transparent transparent transparent;
+}
+.S4-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S4-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #a1030f transparent transparent transparent;
+}
+.S4-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+#S5 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S5 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S5-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #400106 transparent transparent transparent;
+}
+.S5-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S5-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #67020a transparent transparent transparent;
+}
+.S5-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S5-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #8d020d transparent transparent transparent;
+}
+.S5-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+#S6 span {
+  position: absolute;
+  top:22px; right:-95px;
+  -webkit-transform-origin: 50% 50%;
+  border-style: solid;
+  border-width: 228px 95px;
+  box-sizing: border-box;      
+  z-index:5;
+}
+#S6 span a{
+  position: absolute;
+  top:-252px; left:-30px;    /*看fu*/
+  width:64px; height:125px;    /*砍掉長寬，文字便可直寫*/
+  line-height:125px;    /*當行高與區塊高度相同時，文字可垂直置中*/
+  color:#FFF;
+  font-family:"Arial Unicode MS", "微軟正黑體";
+  font-size:16px;	   
+  text-decoration: none;
+}
+.S6-1 {
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+  border-color: #530108 transparent transparent transparent;
+}
+.S6-1:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S6-2 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-color: #7a020b transparent transparent transparent;
+}
+.S6-2:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
+.S6-3 {
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+  border-color: #a1030f transparent transparent transparent;
+}
+.S6-3:hover{
+  border-color: #4D3C54 transparent transparent transparent;
+}
